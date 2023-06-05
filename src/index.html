@@ -3,11 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StopWatcher</title>
     <link href="/dist/output.css" rel="stylesheet">
+    <link rel="icon" type="image/png" href="/icon/stopwatch-fav-icon">
 </head>
 <body>
-
-
+    <div class="display w-full h-screen bg-gradient-to-r from-cyan-500 to-blue-500 flex justify-center items-center">
+        <div class="sw-card w-96 h-card bg-white shadow-2xl rounded-2xl">
+            <header class="title w-full h-header flex justify-center items-center rounded-t-2xl">
+                <h1 class="font-sans font-bold text-3xl cursor-pointer">Stopwatch</h1>
+            </header>
+            <main class="sw-content w-full h-4/6 ">
+                <section class="sw-image w-full h-1/3 flex justify-center items-center">
+                    <img src="/icon/stopwatch-solid.svg" alt="StopWatcher image" class="h-32 h-32 mt-10">
+                </section>
+                <section class="sw-timer w-full h-1/3 flex justify-center items-center">
+                    <div class="timer font-mono font-extrabold text-3xl">00:00:00:000</div>
+                </section>
+                <section class="sw-btn w-full h-1/5 flex justify-center items-start">
+                    <button id="stop-btn" class="w-20 h-8 bg-red-500 mx-1 rounded-2xl font-bold shadow-2xl">Stop</button>
+                    <button id="start-btn" class="w-20 h-8 bg-green-500 mx-1 rounded-2xl font-bold shadow-2xl">Start</button>
+                    <button id="reset-btn" class="w-20 h-8 bg-yellow-300 mx-1 rounded-2xl font-bold shadow-2xl">Reset</button>
+                </section>
+            </main>
+            <footer class="social-network w-full h-footer rounded-b-2xl flex justify-evenly items-start">
+                <a href=linkdin/@sultaniia12">
+                    <img src="/icon/linkedin.svg" class="w-8 h-8">
+                </a>
+                <a href="youtube/@sultaniia12">
+                    <img src="/icon/youtube.svg" class="w-8 h-8">
+                </a>
+                <a href="telegram/@sultaniia12">
+                    <img src="/icon/telegram.svg" class="w-8 h-8">
+                </a>
+            </footer>
+        </div>
+    </div>
 
 <script src="main.js"></script>
 </body>
