@@ -14,11 +14,11 @@ startBtn.addEventListener('click', startClick)
 let stopWatcher = () => {
     milliSeconds += 10;
     seconds = milliSeconds === 1000 ? (seconds + 1) % 60 : seconds;
-    minutes = seconds === 0 && milliSeconds === 0 ? (minutes + 1) % 60 : minutes;
-    hours = minutes === 0 && seconds === 0 && milliSeconds === 0 ? (hours + 1) : hours;
+    minutes = seconds === 0 && milliSeconds === 1000 ? (minutes + 1) % 60 : minutes;
+    hours = minutes === 0 && seconds === 0 && milliSeconds === 1000 ? (hours + 1) : hours;
     milliSeconds = milliSeconds === 1000 ? 0 : milliSeconds;
     let h = hours.toString().padStart(2, '0');
-    let m = minutes.toString().padStart(2, '0');
+    let m = String(minutes).padStart(2, '0');
     let s = seconds.toString().padStart(2, '0');
     let ms = milliSeconds.toString().padStart(3, '0');
     timer.innerText = `${h}:${m}:${s}:${ms}`
